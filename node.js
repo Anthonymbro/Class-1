@@ -1,4 +1,5 @@
 
+// QUESTIONS
 //2nd requirement in the lab
 let username=prompt("What is your name?");
 alert(`Welcome ${username}.`)
@@ -54,3 +55,28 @@ if (school.toLowerCase()=="yes"){
    // ("Wrong")
    alert("Wrong answer");
 }
+
+alert("Thank you for playing "+username)
+
+alert("Hold on. I've got one more question for you. You only have four tries to guess what the correct answer is "+username);
+
+const correctNum=7;
+maxAttempts=4;
+
+for(let attempt=1; attempt<=maxAttempts; attempt++){
+const guess = parseInt(prompt('Guess a number between 1 and 10:'));
+
+if (guess===correctNum){
+   alert("Congratulations! You have guessed the right number!")
+   break
+} else if (guess>=correctNum){
+   alert("Too high!");
+} else if (guess<=correctNum){
+   alert("Too low.")
+} 
+ if (attempt==maxAttempts){
+   alert("You have lost the game. The correct answer was 7.")
+ }
+}
+
+tony array=[0,1,2,3,4,5,6,7,8,9,10];
